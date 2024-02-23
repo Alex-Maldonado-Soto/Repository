@@ -29,27 +29,27 @@ export default function Navbar() {
     >
       <Typography
         variant="span"
-        sx={{ fontFamily: "Montserrat", fontWeight: "bold" }}
+        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold" }}
       >
         MALDEXANDER
       </Typography>
       <IconButton
         onClick={() => setOpenNav(!openNav)}
-        sx={{ display: { sm: "none" } }}
+        sx={{color : "text.secondary", display: { sm: "none" } }}
       >
         <MenuIcon />
       </IconButton>
       <List sx={{ display: { xs: "none", sm: "flex" } }}>
         <ListItem>
-          <ListItemButton sx={{ color: "text.pimary" }}>Inicio</ListItemButton>
+          <ListItemButton sx={{ color: "text.secondary" }}>Inicio</ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton sx={{ color: "text.pimary" }}>
+          <ListItemButton sx={{ color: "text.secondary" }}>
             Conoceme
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton sx={{ color: "text.pimary" }}>
+          <ListItemButton sx={{ color: "text.secondary" }}>
             Portafolio
           </ListItemButton>
         </ListItem>
@@ -61,11 +61,13 @@ export default function Navbar() {
         sx={{ display: { sm: "none" } }}
       >
         <Box sx={{ height: "100vh", backgroundColor: "background.default" }}>
-          <IconButton
+        <IconButton
             color="primary"
             onClick={() => setOpenNav(!openNav)}
             sx={{ justifyContent: "end" }}
-          ></IconButton>
+          >
+            <CloseIcon />
+          </IconButton>
           <List>
             <ListItem>
               <ListItemButton sx={{ color: "text.secondary" }}>
