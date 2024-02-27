@@ -18,13 +18,14 @@ export default function Navbar() {
   return (
     <Box
       component={"nav"}
-      position="sticky"
+      position="absolute"
       sx={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         flexDirection: "row",
-        padding: "0 5%",
+        padding: "0 0 0 5%",
+        width: "80vw",
       }}
     >
       <Typography
@@ -35,11 +36,11 @@ export default function Navbar() {
       </Typography>
       <IconButton
         onClick={() => setOpenNav(!openNav)}
-        sx={{color : "text.secondary", display: { sm: "none" } }}
+        sx={{color : "text.secondary", display: { md: "none" } }}
       >
         <MenuIcon />
       </IconButton>
-      <List sx={{ display: { xs: "none", sm: "flex" } }}>
+      <List sx={{ display: { xs: "none", md: "flex" } }}>
         <ListItem>
           <ListItemButton sx={{ color: "text.secondary" }}>Inicio</ListItemButton>
         </ListItem>
@@ -58,7 +59,7 @@ export default function Navbar() {
         component={"nav"}
         open={openNav}
         anchor="right"
-        sx={{ display: { sm: "none" } }}
+        sx={{ display: { md: "none" } }}
       >
         <Box sx={{ height: "100vh", backgroundColor: "background.default" }}>
         <IconButton

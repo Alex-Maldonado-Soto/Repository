@@ -8,8 +8,8 @@ export default function Header() {
         component={"header"}
         sx={{
           display: "grid",
-          placeItems: "center",
           padding: "10% 0",
+          placeItems: "center",
           height: "100vh",
           alignContent: "center",
           gap: "1rem",
