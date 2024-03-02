@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "@emotion/styled";
 import {
   Box,
   Drawer,
@@ -15,6 +16,9 @@ import CloseIcon from "@mui/icons-material/Close";
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);
 
+  ///////Hay que crear un componente con emotion para hacer un navbar list y que no tenga tantos divs inecesarios
+
+
   return (
     <Box
       component={"nav"}
@@ -25,7 +29,7 @@ export default function Navbar() {
         alignItems: "center",
         flexDirection: "row",
         padding: "0 0 0 5%",
-        width: "80vw",
+        width: "90vw",
       }}
     >
       <Typography

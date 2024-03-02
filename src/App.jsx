@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./assets/componentes/header.jsx";
+import Header from "./assets/componentes/Header.jsx";
 import About from "./assets/componentes/about.jsx";
 import Navbar from "./assets/componentes/Navbar.jsx";
-import Proyectos from "./assets/componentes/proyectos.jsx";
+import Proyectos from "./assets/componentes/Proyectos.jsx";
 import Images from "./assets/Images/img";
 import { ThemeProvider } from "@mui/material/styles";
 import { Theme } from "./assets/Theme.jsx";
