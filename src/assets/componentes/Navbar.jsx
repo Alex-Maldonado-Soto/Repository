@@ -9,11 +9,18 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import styled from "@emotion/styled";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);
+
+  const NavList = styled("li") ({
+    textAlign: "center",
+    padding: "10px 0",
+    color: "theme.palette.text.secondary",
+  })
 
   return (
     <Box
@@ -70,21 +77,9 @@ export default function Navbar() {
             <CloseIcon />
           </IconButton>
           <List>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                Inicio
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                About Me
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                Portafolio
-              </ListItemButton>
-            </ListItem>
+            <NavList>Inicio</NavList>
+            <NavList>Conoceme</NavList>
+            <NavList>Portafolio</NavList>
           </List>
         </Box>
       </Drawer>
