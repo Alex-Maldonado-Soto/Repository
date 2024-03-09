@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import styled from "@emotion/styled";
+import { Theme } from "../Theme";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -19,7 +20,11 @@ export default function Navbar() {
   const NavList = styled("li") ({
     textAlign: "center",
     padding: "10px 0",
-    color: "theme.palette.text.secondary",
+    color: Theme.palette.text.secondary,
+
+    "&:hover": {
+      color: Theme.palette.primary.main
+    }
   })
 
   return (
@@ -32,12 +37,12 @@ export default function Navbar() {
         alignItems: "center",
         flexDirection: "row",
         padding: "0 0 0 5%",
-        width: "80vw",
+        width: "90vw",
       }}
     >
       <Typography
         variant="span"
-        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold" }}
+        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold", fontSize: { md: "1.2rem", lg: "1.4rem" } }}
       >
         MALDEXANDER
       </Typography>
@@ -47,20 +52,10 @@ export default function Navbar() {
       >
         <MenuIcon />
       </IconButton>
-      <List sx={{ display: { xs: "none", md: "flex" } }}>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>Inicio</ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>
-            Conoceme
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>
-            Portafolio
-          </ListItemButton>
-        </ListItem>
+      <List sx={{ display: { xs: "none", md: "flex" }, gap: "5rem", fontSize: { md: "1.2rem", lg: "1.4rem" } }}>
+        <NavList>Inicio</NavList>
+        <NavList>Conoceme</NavList>
+        <NavList>Portafolio</NavList>
       </List>
       <Drawer
         component={"nav"}
@@ -76,7 +71,7 @@ export default function Navbar() {
           >
             <CloseIcon />
           </IconButton>
-          <List>
+          <List sx={{ padding: "40px", textAlign: "left", fontSize: { xs: "1.2rem", sm: "1.6rem"} }}>
             <NavList>Inicio</NavList>
             <NavList>Conoceme</NavList>
             <NavList>Portafolio</NavList>

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./assets/componentes/header.jsx";
+import Header from "./assets/componentes/Header.jsx";
 import About from "./assets/componentes/about.jsx";
 import Navbar from "./assets/componentes/Navbar.jsx";
 import Proyectos from "./assets/componentes/proyectos.jsx";
@@ -14,9 +14,8 @@ function App() {
       <Box
         position={"absolute"}
         component={"picture"}
-        sx={{ width: "100vw", height: "99vh", zIndex: -1 }}
       >
-        <source media="(max-width: 800px)" srcSet={Images.backgroundMobile} />
+        <source media="(max-width: 900px)" srcSet={Images.backgroundMobile} />
         <img
           src={Images.backgroundDesktop}
           alt=""
@@ -35,6 +34,8 @@ function App() {
         <Navbar />
         <Header />
       </Container>
+
+      
     </ThemeProvider>
   );
 }
