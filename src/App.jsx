@@ -16,7 +16,7 @@ function App() {
         component={"picture"}
         sx={{ width: "100vw", height: "99vh", zIndex: -1 }}
       >
-        <source media="(max-width: 800px)" srcSet={Images.backgroundMobile} />
+        <source media="(max-width: 900px)" srcSet={Images.backgroundMobile} />
         <img
           src={Images.backgroundDesktop}
           alt=""
