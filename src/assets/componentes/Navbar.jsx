@@ -10,14 +10,27 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import styled from "@emotion/styled";
+import { Theme } from "../Theme";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Navbar() {
   const [openNav, setOpenNav] = useState(false);
 
+<<<<<<< HEAD
   ///////Hay que crear un componente con emotion para hacer un navbar list y que no tenga tantos divs inecesarios
 
+  const NavList = styled("li") ({
+    textAlign: "center",
+    padding: "10px 0",
+    color: Theme.palette.text.secondary,
+
+    "&:hover": {
+      color: Theme.palette.primary.main
+    }
+  })
+>>>>>>> 9031c855dcc96d4ef49b7372d4701ff729015050
 
   return (
     <Box
@@ -34,7 +47,7 @@ export default function Navbar() {
     >
       <Typography
         variant="span"
-        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold" }}
+        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold", fontSize: { md: "1.2rem", lg: "1.4rem" } }}
       >
         MALDEXANDER
       </Typography>
@@ -44,20 +57,10 @@ export default function Navbar() {
       >
         <MenuIcon />
       </IconButton>
-      <List sx={{ display: { xs: "none", md: "flex" } }}>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>Inicio</ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>
-            Conoceme
-          </ListItemButton>
-        </ListItem>
-        <ListItem>
-          <ListItemButton sx={{ color: "text.secondary" }}>
-            Portafolio
-          </ListItemButton>
-        </ListItem>
+      <List sx={{ display: { xs: "none", md: "flex" }, gap: "5rem", fontSize: { md: "1.2rem", lg: "1.4rem" } }}>
+        <NavList>Inicio</NavList>
+        <NavList>Conoceme</NavList>
+        <NavList>Portafolio</NavList>
       </List>
       <Drawer
         component={"nav"}
@@ -73,22 +76,10 @@ export default function Navbar() {
           >
             <CloseIcon />
           </IconButton>
-          <List>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                Inicio
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                About Me
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton sx={{ color: "text.secondary" }}>
-                Portafolio
-              </ListItemButton>
-            </ListItem>
+          <List sx={{ padding: "40px", textAlign: "left", fontSize: { xs: "1.2rem", sm: "1.6rem"} }}>
+            <NavList>Inicio</NavList>
+            <NavList>Conoceme</NavList>
+            <NavList>Portafolio</NavList>
           </List>
         </Box>
       </Drawer>
