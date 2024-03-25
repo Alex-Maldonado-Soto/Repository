@@ -12,6 +12,8 @@ export default function Header() {
     <Container
       component={"header"}
       sx={{
+        width: { xs: "100%", md: "100%", lg: "100%" },
+        maxWidth: { xs: "100%", md: "100%", lg: "100%" },
         display: "flex",
         padding: "10% 0",
         placeItems: "center",
