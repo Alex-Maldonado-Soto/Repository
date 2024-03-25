@@ -35,12 +35,12 @@ export default function Navbar() {
       component={"nav"}
       position="absolute"
       sx={{
+        position: "sticky",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         flexDirection: "row",
-        padding: "0 0 0 5%",
-        width: "90vw",
+        width: "100%",
       }}
     >
       <Typography

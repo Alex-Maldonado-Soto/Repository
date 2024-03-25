@@ -14,6 +14,13 @@ function App() {
       <Box
         position={"absolute"}
         component={"picture"}
+        sx={{
+          height: "100vh",
+          width: "100%",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
       >
         <source media="(max-width: 900px)" srcSet={Images.backgroundMobile} />
         <img
@@ -29,7 +36,7 @@ function App() {
       </Box>
       <Container
         maxWidth="false"
-        sx={{width: "100vw", zIndex: 100 }}
+        sx={{width: "90vw", zIndex: 100 }}
       >
         <Navbar />
         <Header />
