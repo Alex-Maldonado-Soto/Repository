@@ -14,7 +14,6 @@ function App() {
       <Box
         position={"absolute"}
         component={"picture"}
-        sx={{ width: "100vw", height: "99vh", zIndex: -1 }}
       >
         <source media="(max-width: 900px)" srcSet={Images.backgroundMobile} />
         <img
@@ -35,6 +34,8 @@ function App() {
         <Navbar />
         <Header />
       </Container>
+
+      
     </ThemeProvider>
   );
 }

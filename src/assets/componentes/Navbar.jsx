@@ -74,7 +74,11 @@ export default function Navbar() {
           >
             <CloseIcon />
           </IconButton>
+<<<<<<< HEAD
+          <List sx={{ padding: "40px", textAlign: "left", fontSize: { xs: "1.2rem", sm: "1.6rem"} }}>
+=======
           <List sx={{ padding: "40px", textAlign: "left", fontSize: { xs: "1.2rem", sm: "1.4rem"} }}>
+>>>>>>> 36b75ebf2c6eeb5fd89ca8b50dbb85538da696f0
             <NavList>Inicio</NavList>
             <NavList>Conoceme</NavList>
             <NavList>Portafolio</NavList>
