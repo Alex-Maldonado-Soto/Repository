@@ -16,7 +16,7 @@ export default function Header() {
         width: { xs: "100%", md: "100%", lg: "100%" },
         maxWidth: { xs: "100%", md: "100%", lg: "100%" },
         display: "flex",
-        padding: { xs: "0", md: "0", lg: "0" },
+        padding: { xs: "0", md: "0 5%" },
         placeItems: "center",
         justifyContent: "center",
         height: "90.5vh",

@@ -21,7 +21,10 @@ export const Theme = createTheme({
       main: '#e3b518',
     },
     secondary: {
-      main: 'hsl(192, 100%, 67%), hsl(280, 87%, 65%)',
+      main: "#050a30",
+    },
+    sure: {
+      main: '#f1f1f1',
     },
     error: {
       main: 'hsl(0, 100%, 66%)',

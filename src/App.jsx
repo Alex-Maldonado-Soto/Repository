@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./assets/componentes/Header.jsx";
-import About from "./assets/componentes/about.jsx";
+import About from "./assets/componentes/About.jsx";
 import Navbar from "./assets/componentes/Navbar.jsx";
 import Proyectos from "./assets/componentes/Proyectos.jsx";
 import Images from "./assets/Images/img";
@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={Theme}>
       <Box
-        position={"absolute"}
+        position={"fixed"}
         component={"picture"}
         sx={{
           height: "100vh",
@@ -34,13 +34,14 @@ function App() {
           }}
         />
       </Box>
-      <Container
+      <Box
         maxWidth="false"
-        sx={{width: "90vw", zIndex: 100 }}
+        sx={{zIndex: 100}}
       >
         <Navbar />
         <Header />
-      </Container>
+        <About />
+      </Box>
 
       
     </ThemeProvider>
