@@ -1,11 +1,6 @@
-import {
-  Box,
-  Button,
-  Container,
-  Icon,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, IconButton, Tooltip, Typography } from "@mui/material";
+import JavascriptIcon from "@mui/icons-material/Javascript";
+import CssIcon from "@mui/icons-material/Css";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
@@ -110,9 +105,7 @@ export default function About() {
           Actualmente, estoy en búsqueda de nuevos retos que me permitan seguir
           creciendo en este emocionante mundo del desarrollo web.
         </Typography>
-        <Typography variant="h4" sx={{ padding: "5%" }}>
-          Lenguajes
-        </Typography>
+
         <Box
           component="ul"
           sx={{
@@ -121,14 +114,46 @@ export default function About() {
             gap: "10px",
             justifyContent: "center",
           }}
-        >
-          <HtmlIcon
-            fontSize="large"
-            color="sure"
-            sx={{ backgroundColor: "secondary.main" }}
-          />
-        </Box>
+        ></Box>
         <Typography variant="h4">Tecnologias</Typography>
+        <Box
+          component="ul"
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "flex-start",
+            padding: "0",
+            gap: "10px",
+
+            '& img': {
+              width: '50px',
+              height: '50px',
+              margin: '10px',
+            }
+          }}
+        >
+         <Tooltip title="JavaScript">
+          <Img src={Image.jslogo} alt="JavaScript" aria-label="JavaScript" />
+          </Tooltip>
+          <Tooltip title="HTML">
+          <Img src={Image.htmllogo} alt="HTML" aria-label="HTML" />
+          </Tooltip>
+          <Tooltip title="CSS">
+          <Img src={Image.csslogo} alt="CSS"  aria-label="CSS" />
+          </Tooltip>
+          <Tooltip title="React">
+          <Img src={Image.reactlogo} alt="React"  aria-label="React"/>
+          </Tooltip>
+          <Tooltip title="Sass">
+          <Img src={Image.sasslogo} alt="Sass" aria-label="Sass" />
+          </Tooltip>
+          <Tooltip title="Git">
+          <Img src={Image.gitlogo} alt="Git"  aria-label="Git"/>
+          </Tooltip>
+          <Tooltip title="Material UI">
+          <Img src={Image.materialuilogo} alt="Material UI"  aria-label="Material UI"/>
+          </Tooltip>
+        </Box>
       </Box>
     </Box>
   );
