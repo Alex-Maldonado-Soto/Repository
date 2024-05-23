@@ -4,9 +4,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 
 export default function Header() {
-
-//////Hya un bug con el margin fue lo que le quite al header, se traba y no funciona
-/////Hay que centrarlo con flex box para que se puedan colocar las imagenes tambien
+  //////Hya un bug con el margin fue lo que le quite al header, se traba y no funciona
+  /////Hay que centrarlo con flex box para que se puedan colocar las imagenes tambien
 
   return (
     <Container
@@ -66,10 +65,21 @@ export default function Header() {
           </Typography>
           {"Alex Maldonado>"}
         </Typography>
-        <Typography component="h1" color={"text.secondary"}  fontSize={{ xs: "1.5rem", md: "2rem" }}>
+        <Typography
+          component="h1"
+          color={"text.secondary"}
+          fontSize={{ xs: "1.5rem", md: "2rem" }}
+        >
           Desarrollador web en Guatemala
         </Typography>
-        <GitHubIcon sx={{ color: "text.secondary", paddingTop: "10px" ,fontSize: { xs: "2rem", md: "3rem" } }} />
+        <GitHubIcon
+          aria-label="Link de mi GitHub"
+          sx={{
+            color: "text.secondary",
+            paddingTop: "10px",
+            fontSize: { xs: "2rem", md: "3rem" },
+          }}
+        />
       </Box>
 
       <Box
@@ -79,10 +89,9 @@ export default function Header() {
           height: { md: "100%" },
           display: { xs: "none", md: "block" },
         }}
-
       >
         <img
-          src={Image.imgContact}
+          src={Image.imgMain}
           alt=""
           style={{
             width: "100%",
@@ -92,7 +101,6 @@ export default function Header() {
           }}
         />
       </Box>
-
     </Container>
   );
 }
