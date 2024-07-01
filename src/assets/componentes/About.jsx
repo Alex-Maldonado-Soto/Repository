@@ -1,22 +1,22 @@
 import { Box, IconButton, Tooltip, Typography } from "@mui/material";
-import JavascriptIcon from "@mui/icons-material/Javascript";
-import CssIcon from "@mui/icons-material/Css";
 import styled from "@emotion/styled";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
-import HtmlIcon from "@mui/icons-material/Html";
 import Image from "../Images/img";
 import React from "react";
+import { BorderAll } from "@mui/icons-material";
+import img from "../Images/img";
 
 export default function About() {
   const Figure = styled("figure")({
-    width: "100vw",
+    width: "20vw",
     height: "80vh",
     margin: "0",
     padding: "0",
     display: "grid",
+    alignContent: "center",
     justifyContent: "center",
     alignItems: "center",
   });
@@ -33,7 +33,9 @@ export default function About() {
     <Box
       component="section"
       sx={{
-        display: { xs: "grid", md: "flex" },
+        display: "grid",
+        justifyContent: "center",
+        gridTemplateColumns: "50% 50%",
         width: "100%",
         maxWidth: "100%",
       }}
@@ -49,7 +51,11 @@ export default function About() {
         }}
       >
         <Figure>
-          <Img src={Image.imgContact} alt="" />
+          <Img
+          style={{ borderRadius: "100%" }}
+            src={Image.imgContact}
+            alt=""
+          />
           <Caption>
             <IconButton color="text.secondary" aria-label="Link de mi GitHub">
               <GitHubIcon fontSize="large" color="sure" />
@@ -125,33 +131,37 @@ export default function About() {
             padding: "0",
             gap: "10px",
 
-            '& img': {
-              width: '50px',
-              height: '50px',
-              margin: '10px',
-            }
+            "& img": {
+              width: "50px",
+              height: "50px",
+              margin: "10px",
+            },
           }}
         >
-         <Tooltip title="JavaScript">
-          <Img src={Image.jslogo} alt="JavaScript" aria-label="JavaScript" />
+          <Tooltip title="JavaScript">
+            <Img src={Image.jslogo} alt="JavaScript" aria-label="JavaScript" />
           </Tooltip>
           <Tooltip title="HTML">
-          <Img src={Image.htmllogo} alt="HTML" aria-label="HTML" />
+            <Img src={Image.htmllogo} alt="HTML" aria-label="HTML" />
           </Tooltip>
           <Tooltip title="CSS">
-          <Img src={Image.csslogo} alt="CSS"  aria-label="CSS" />
+            <Img src={Image.csslogo} alt="CSS" aria-label="CSS" />
           </Tooltip>
           <Tooltip title="React">
-          <Img src={Image.reactlogo} alt="React"  aria-label="React"/>
+            <Img src={Image.reactlogo} alt="React" aria-label="React" />
           </Tooltip>
           <Tooltip title="Sass">
-          <Img src={Image.sasslogo} alt="Sass" aria-label="Sass" />
+            <Img src={Image.sasslogo} alt="Sass" aria-label="Sass" />
           </Tooltip>
           <Tooltip title="Git">
-          <Img src={Image.gitlogo} alt="Git"  aria-label="Git"/>
+            <Img src={Image.gitlogo} alt="Git" aria-label="Git" />
           </Tooltip>
           <Tooltip title="Material UI">
-          <Img src={Image.materialuilogo} alt="Material UI"  aria-label="Material UI"/>
+            <Img
+              src={Image.materialuilogo}
+              alt="Material UI"
+              aria-label="Material UI"
+            />
           </Tooltip>
         </Box>
       </Box>
