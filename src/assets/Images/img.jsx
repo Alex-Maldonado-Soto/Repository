@@ -1,14 +1,14 @@
-import backgroundDesktop from "../Images/backgrounDesktop.png";
+import backgroundDesktop from "../Images/backgrounDesktop.jpg";
 import backgroundMobile from "../Images/backgroundMobile.jpg";
-import imgContact from "../Images/imgContact.png";
+import imgContact from "../Images/imgContact.jpg";
 import imgMain from "../Images/imgMain.png";
-import jslogo from "../Images/jslogo.webp";
-import csslogo from "../Images/csslogo.webp";
-import htmllogo from "../Images/htmllogo.webp";
-import reactlogo from "../Images/reactlogo.webp";
-import sasslogo from "../Images/sasslogo.webp";
-import gitlogo from "../Images/gitlogo.webp";
-import materialuilogo from "../Images/materialuilogo.webp";
+import jslogo from "../Images/jslogo.jpg";
+import csslogo from "../Images/csslogo.jpg";
+import htmllogo from "../Images/htmllogo.jpg";
+import reactlogo from "../Images/reactlogo.jpg";
+import sasslogo from "../Images/sasslogo.jpg";
+import gitlogo from "../Images/gitlogo.jpg";
+import materialuilogo from "../Images/materialuilogo.jpg";
 
 export default {
     "backgroundDesktop": backgroundDesktop,

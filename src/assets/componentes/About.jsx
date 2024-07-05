@@ -6,10 +6,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import Image from "../Images/img";
 import React from "react";
-import { BorderAll } from "@mui/icons-material";
-import img from "../Images/img";
 
 export default function About() {
+  // Estilos para el elemento Figure utilizando styled-components
   const Figure = styled("figure")({
     width: "20vw",
     height: "80vh",
@@ -21,25 +20,29 @@ export default function About() {
     alignItems: "center",
   });
 
+  // Estilos para el elemento Img utilizando styled-components
   const Img = styled("img")({
     width: "100%",
   });
 
+  // Estilos para el elemento Caption utilizando styled-components
   const Caption = styled("figcaption")({
     textAlign: "center",
   });
 
   return (
+    // Caja principal que contiene toda la sección "About"
     <Box
       component="section"
       sx={{
         display: "grid",
         justifyContent: "center",
-        gridTemplateColumns: "50% 50%",
+        gridTemplateColumns: { xs: "100%", sm: "50% 50%" },
         width: "100%",
         maxWidth: "100%",
       }}
     >
+      {/* Primer artículo que contiene la imagen y los iconos */}
       <Box
         component="article"
         backgroundColor="background.default"
@@ -52,17 +55,20 @@ export default function About() {
       >
         <Figure>
           <Img
-          style={{ borderRadius: "100%" }}
+            style={{ borderRadius: "100%" }}
             src={Image.imgContact}
             alt=""
           />
           <Caption>
+            {/* Botón de icono para GitHub con tooltip */}
             <IconButton color="text.secondary" aria-label="Link de mi GitHub">
               <GitHubIcon fontSize="large" color="sure" />
             </IconButton>
+            {/* Botón de icono para Email con tooltip */}
             <IconButton color="text.secondary" aria-label="Link de mi Email">
               <EmailIcon fontSize="large" color="sure" />
             </IconButton>
+            {/* Botón de icono para Instagram con tooltip */}
             <IconButton
               color="text.secondary"
               aria-label="Link de mi Instagram"
@@ -72,11 +78,14 @@ export default function About() {
           </Caption>
         </Figure>
       </Box>
+
+      {/* Segundo artículo que contiene el texto y las tecnologías */}
       <Box
         component="article"
         backgroundColor="background.paper"
         sx={{ padding: "5%", display: "grid" }}
       >
+        {/* Título de la sección "Sobre Mi" con icono */}
         <Typography
           variant="h2"
           sx={{
@@ -97,11 +106,13 @@ export default function About() {
           />
           Sobre Mi
         </Typography>
+        
+        {/* Descripción personal */}
         <Typography
           component="p"
           variant="p"
           color="secondary"
-          sx={{ fontSize: { xs: "1rem", md: "1rem" }, padding: "5%" }}
+          sx={{ fontSize: { xs: "1rem" }, padding: "5%" }}
         >
           Hola! Soy Desarrollador Web en Guatemala, y para mí, la esencia de la
           programación es la capacidad de añadir un toque mágico a cada sitio
@@ -121,7 +132,11 @@ export default function About() {
             justifyContent: "center",
           }}
         ></Box>
+        
+        {/* Título de la sección "Tecnologías" */}
         <Typography variant="h4">Tecnologias</Typography>
+        
+        {/* Lista de tecnologías con íconos */}
         <Box
           component="ul"
           sx={{
@@ -138,6 +153,7 @@ export default function About() {
             },
           }}
         >
+          {/* Elementos de la lista con tooltip para cada tecnología */}
           <Tooltip title="JavaScript">
             <Img src={Image.jslogo} alt="JavaScript" aria-label="JavaScript" />
           </Tooltip>

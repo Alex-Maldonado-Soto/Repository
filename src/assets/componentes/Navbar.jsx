@@ -4,9 +4,6 @@ import {
   Drawer,
   IconButton,
   List,
-  ListItem,
-  ListItemButton,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import styled from "@emotion/styled";
@@ -15,22 +12,24 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 export default function Navbar() {
+  // Estado para controlar la apertura del menú de navegación
   const [openNav, setOpenNav] = useState(false);
 
+  /////// Hay que crear un componente con emotion para hacer un navbar list y que no tenga tantos divs innecesarios
 
-  ///////Hay que crear un componente con emotion para hacer un navbar list y que no tenga tantos divs inecesarios
-
-  const NavList = styled("li") ({
+  // Componente estilizado para los elementos de la lista de navegación
+  const NavList = styled("li")({
     textAlign: "center",
     padding: "10px 0",
     color: Theme.palette.text.secondary,
 
     "&:hover": {
-      color: Theme.palette.primary.main
-    }
-  })
+      color: Theme.palette.primary.main,
+    },
+  });
 
   return (
+    // Contenedor principal de la barra de navegación
     <Box
       component={"nav"}
       position="absolute"
@@ -45,23 +44,41 @@ export default function Navbar() {
         height: "10vh",
       }}
     >
+      {/* Título de la barra de navegación */}
       <Typography
         variant="span"
-        sx={{ color: "text.secondary", fontFamily: "Montserrat", fontWeight: "bold", fontSize: { md: "1.2rem", lg: "1.4rem" } }}
+        sx={{
+          color: "text.secondary",
+          fontFamily: "Montserrat",
+          fontWeight: "bold",
+          fontSize: { md: "1.2rem", lg: "1.4rem" },
+        }}
       >
         MALDEXANDER
       </Typography>
+
+      {/* Botón de menú para pantallas pequeñas */}
       <IconButton
         onClick={() => setOpenNav(!openNav)}
-        sx={{color : "text.secondary", display: { md: "none" } }}
+        sx={{ color: "text.secondary", display: { md: "none" } }}
       >
         <MenuIcon />
       </IconButton>
-      <List sx={{ display: { xs: "none", md: "flex" }, gap: "5rem", fontSize: { md: "1.2rem", lg: "1.4rem" } }}>
+
+      {/* Lista de navegación para pantallas medianas y grandes */}
+      <List
+        sx={{
+          display: { xs: "none", md: "flex" },
+          gap: "5rem",
+          fontSize: { md: "1.2rem", lg: "1.4rem" },
+        }}
+      >
         <NavList>Inicio</NavList>
         <NavList>Conoceme</NavList>
         <NavList>Portafolio</NavList>
       </List>
+
+      {/* Cajón de navegación para pantallas pequeñas */}
       <Drawer
         component={"nav"}
         open={openNav}
@@ -69,14 +86,23 @@ export default function Navbar() {
         sx={{ display: { md: "none" } }}
       >
         <Box sx={{ height: "100vh", backgroundColor: "background.default" }}>
-        <IconButton
+          {/* Botón de cerrar menú */}
+          <IconButton
             color="primary"
             onClick={() => setOpenNav(!openNav)}
             sx={{ justifyContent: "end" }}
           >
             <CloseIcon />
           </IconButton>
-          <List sx={{ padding: "40px", textAlign: "left", fontSize: { xs: "1.2rem", sm: "1.4rem"} }}>
+
+          {/* Lista de navegación dentro del cajón */}
+          <List
+            sx={{
+              padding: "40px",
+              textAlign: "left",
+              fontSize: { xs: "1.2rem", sm: "1.4rem" },
+            }}
+          >
             <NavList>Inicio</NavList>
             <NavList>Conoceme</NavList>
             <NavList>Portafolio</NavList>

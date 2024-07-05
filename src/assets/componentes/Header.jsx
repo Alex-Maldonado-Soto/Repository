@@ -4,10 +4,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import React from "react";
 
 export default function Header() {
-  //////Hya un bug con el margin fue lo que le quite al header, se traba y no funciona
-  /////Hay que centrarlo con flex box para que se puedan colocar las imagenes tambien
+  
 
   return (
+    // Contenedor principal que actúa como el encabezado de la página
     <Container
       component={"header"}
       sx={{
@@ -23,6 +23,7 @@ export default function Header() {
         margin: "0",
       }}
     >
+      {/* Grupo de encabezado que contiene los textos */}
       <Box
         component={"hgroup"}
         sx={{
@@ -32,6 +33,7 @@ export default function Header() {
         }}
         display={"grid"}
       >
+        {/* Texto de saludo */}
         <Typography
           component="span"
           display={"block"}
@@ -49,6 +51,8 @@ export default function Header() {
             .
           </Typography>
         </Typography>
+
+        {/* Texto de introducción */}
         <Typography
           component="hgroup"
           fontWeight={"bold"}
@@ -65,6 +69,8 @@ export default function Header() {
           </Typography>
           {"Alex Maldonado>"}
         </Typography>
+
+        {/* Texto de descripción */}
         <Typography
           component="h1"
           color={"text.secondary"}
@@ -72,6 +78,8 @@ export default function Header() {
         >
           Desarrollador web en Guatemala
         </Typography>
+
+        {/* Icono de GitHub */}
         <GitHubIcon
           aria-label="Link de mi GitHub"
           sx={{
@@ -82,6 +90,7 @@ export default function Header() {
         />
       </Box>
 
+      {/* Imagen principal */}
       <Box
         component={"picture"}
         sx={{
