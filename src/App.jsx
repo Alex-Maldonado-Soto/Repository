@@ -45,6 +45,7 @@ function App() {
         <Navbar />
         <Header />
         <About />
+        <Proyectos />
       </Box>
     </ThemeProvider>
   );
