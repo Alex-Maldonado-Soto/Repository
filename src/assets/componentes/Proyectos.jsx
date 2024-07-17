@@ -3,8 +3,6 @@ import axios from "axios";
 import {
   Box,
   List,
-  ListItem,
-  ListItemText,
   CardMedia,
   Typography,
   CircularProgress,
@@ -12,6 +10,7 @@ import {
   Button,
   Card,
   CardHeader,
+  CardActions,
 } from "@mui/material";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 
@@ -37,8 +36,6 @@ const Proyectos = () => {
         setLoading(false); // Finaliza el estado de carga
       }
     };
-
-   
 
     fetchRepos();
   }, []);
@@ -73,25 +70,81 @@ const Proyectos = () => {
       </Typography>
       <List
         component={"ul"}
-        sx={{ display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", gap: 2 }}
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "row",
+          justifyContent: "space-around",
+          gap: 2,
+        }}
       >
         {repos.map((repo) => (
-          <Card component={"li"} key={repo.id} sx={{ p: 2, width: { xs: "100%", md: "30%"}}}>
+          <Card
+            component={"li"}
+            key={repo.id}
+            sx={{
+              width: "100%",
+              maxHeight: "40vh",
+              display: "grid",
+              gridTemplateColumns: "40% 60%",
+              gridTemplateRows: "20% 80%",
+              p: 2,
+            }}
+          >
+            <CardHeader
+              title={repo.name}
+              sx={{
+                width: "100%",
+                gridRow: 1,
+                gridColumnStart: 1,
+                gridColumnEnd: 3,
+                textAlign: "left",
+              }}
+            ></CardHeader>
             <CardMedia
+              sx={{ width: "100%", height: "100%", gridColumn: 1, gridRow: 2 }}
               component="img"
               alt=""
-              height="100"
               image="https://via.placeholder.com/50"
             />
-            <CardHeader
-              title={repo.name}>
-              </CardHeader>
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
+            <CardContent
+              sx={{
+                display: "grid",
+                alignContent: "space-between",
+                justifyContent: "start",
+                justifyItems: "start",
+                textAlign: "justify",
+                gridTemplateRows: "80% 10%",
+              }}
+            >
+              <Typography
+                component="p"
+                sx={{
+                  textAlign: "left",
+                  overflowY: "auto",
+                  scrollbehavior: "smooth",
+                }}
+              >
                 {repo.description}
               </Typography>
-              <Button variant="contained" href={repo.html_url} target="_blank">Ver Repo</Button>
-              <Button variant="contained" href={"https://alex-maldonado-soto.github.io/" + repo.name} target="_blank">Ver Proyecto</Button>
+              <CardActions>
+                <Button
+                  variant="contained"
+                  size="small"
+                  color="primary"
+                  href={repo.html_url}
+                >
+                  Repositorio
+                </Button>
+                <Button
+                  size="small"
+                  variant="contained"
+                  color="primary"
+                  href={"https://alex-maldonado-soto.github.io/" + repo.name}
+                >
+                  Web
+                </Button>
+              </CardActions>
             </CardContent>
           </Card>
         ))}
