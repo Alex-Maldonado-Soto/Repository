@@ -88,7 +88,7 @@ const Proyectos = () => {
               display: "grid",
               gridTemplateColumns: "40% 60%",
               gridTemplateRows: "20% 80%",
-              p: 2,
+              p: 1.5,
             }}
           >
             <CardHeader
@@ -115,6 +115,7 @@ const Proyectos = () => {
                 justifyItems: "start",
                 textAlign: "justify",
                 gridTemplateRows: "80% 10%",
+                padding: "5px",
               }}
             >
               <Typography
@@ -127,7 +128,7 @@ const Proyectos = () => {
               >
                 {repo.description}
               </Typography>
-              <CardActions>
+              <CardActions >
                 <Button
                   variant="contained"
                   size="small"
