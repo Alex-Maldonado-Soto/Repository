@@ -37,7 +37,7 @@ export default function About() {
       sx={{
         display: "grid",
         justifyContent: "center",
-        gridTemplateColumns: { xs: "100%", sm: "50% 50%" },
+        gridTemplateColumns: { xs: "100%", md: "50% 50%" },
         width: "100%",
         maxWidth: "100%",
       }}
