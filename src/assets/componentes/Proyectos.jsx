@@ -83,7 +83,7 @@ const Proyectos = () => {
             component={"li"}
             key={repo.id}
             sx={{
-              width: "100%",
+              width: "49%",
               maxHeight: "40vh",
               display: "grid",
               gridTemplateColumns: "40% 60%",
