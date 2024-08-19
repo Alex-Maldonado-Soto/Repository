@@ -95,8 +95,9 @@ export default function Header() {
         component={"picture"}
         sx={{
           width: { md: "100%" },
+          maxWidth: "auto",
           height: { md: "100%" },
-          display: { xs: "none", md: "block" },
+          display: { xs: "none", md: "contents" },
         }}
       >
         <img

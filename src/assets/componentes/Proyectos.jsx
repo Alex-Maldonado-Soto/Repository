@@ -83,11 +83,18 @@ const Proyectos = () => {
             component={"li"}
             key={repo.id}
             sx={{
-              width: "49%",
-              maxHeight: "40vh",
+              width: { sm: "80vw", md: "49%" },
+              height: { xs: "60vh"},
+              maxHeight: {sm: "40vh"},
               display: "grid",
-              gridTemplateColumns: "40% 60%",
-              gridTemplateRows: "20% 80%",
+              gridTemplateColumns: {
+                xs: "80vw",
+                sm: "40% 60%",
+              },
+              gridTemplateRows: {
+                xs: "10% 40% 50%",
+                sm: "20% 80%",
+              },
               p: 1.5,
             }}
           >
@@ -97,7 +104,7 @@ const Proyectos = () => {
                 width: "100%",
                 gridRow: 1,
                 gridColumnStart: 1,
-                gridColumnEnd: 3,
+                gridColumnEnd: {xs: 1, sm: 3},
                 textAlign: "left",
               }}
             ></CardHeader>
@@ -128,7 +135,7 @@ const Proyectos = () => {
               >
                 {repo.description}
               </Typography>
-              <CardActions >
+              <CardActions>
                 <Button
                   variant="contained"
                   size="small"
