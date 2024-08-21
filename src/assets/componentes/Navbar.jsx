@@ -56,59 +56,6 @@ export default function Navbar() {
       >
         MALDEXANDER
       </Typography>
-
-      {/* Botón de menú para pantallas pequeñas */}
-      <IconButton
-        onClick={() => setOpenNav(!openNav)}
-        sx={{ color: "text.secondary", display: { md: "none" } }}
-      >
-        <MenuIcon />
-      </IconButton>
-
-      {/* Lista de navegación para pantallas medianas y grandes */}
-      <List
-        sx={{
-          display: { xs: "none", md: "flex" },
-          gap: "5rem",
-          fontSize: { md: "1.2rem", lg: "1.4rem" },
-        }}
-      >
-        <NavList>Inicio</NavList>
-        <NavList>Conoceme</NavList>
-        <NavList>Portafolio</NavList>
-      </List>
-
-      {/* Cajón de navegación para pantallas pequeñas */}
-      <Drawer
-        component={"nav"}
-        open={openNav}
-        anchor="right"
-        sx={{ display: { md: "none" } }}
-      >
-        <Box sx={{ height: "100vh", backgroundColor: "background.default" }}>
-          {/* Botón de cerrar menú */}
-          <IconButton
-            color="primary"
-            onClick={() => setOpenNav(!openNav)}
-            sx={{ justifyContent: "end" }}
-          >
-            <CloseIcon />
-          </IconButton>
-
-          {/* Lista de navegación dentro del cajón */}
-          <List
-            sx={{
-              padding: "40px",
-              textAlign: "left",
-              fontSize: { xs: "1.2rem", sm: "1.4rem" },
-            }}
-          >
-            <NavList>Inicio</NavList>
-            <NavList>Conoceme</NavList>
-            <NavList>Portafolio</NavList>
-          </List>
-        </Box>
-      </Drawer>
     </Box>
   );
 }

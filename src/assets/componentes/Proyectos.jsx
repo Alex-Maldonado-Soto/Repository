@@ -87,6 +87,7 @@ const Proyectos = () => {
               height: { xs: "60vh"},
               maxHeight: {sm: "40vh"},
               display: "grid",
+              
               gridTemplateColumns: {
                 xs: "80vw",
                 sm: "40% 60%",
