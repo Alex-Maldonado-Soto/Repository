@@ -30,6 +30,7 @@ const Proyectos = () => {
           "https://api.github.com/users/Alex-Maldonado-Soto/repos"
         );
         setRepos(response.data);
+        console.log(response.data);
       } catch (error) {
         setError(error); // Manejo de errores
       } finally {
@@ -78,6 +79,7 @@ const Proyectos = () => {
           gap: 2,
         }}
       >
+
         {repos.map((repo) => (
           <Card
             component={"li"}
@@ -93,7 +95,7 @@ const Proyectos = () => {
                 sm: "40% 60%",
               },
               gridTemplateRows: {
-                xs: "10% 40% 50%",
+                xs: "20% 40% 40%",
                 sm: "20% 80%",
               },
               p: 1.5,
@@ -113,7 +115,7 @@ const Proyectos = () => {
               sx={{ width: "100%", height: "100%", gridColumn: 1, gridRow: 2 }}
               component="img"
               alt=""
-              image="https://via.placeholder.com/50"
+              image={"https://github.com/Alex-Maldonado-Soto/"+ repo.name +"/blob/main/"+ repo.name +".JPG?raw=true" }
             />
             <CardContent
               sx={{
@@ -149,6 +151,7 @@ const Proyectos = () => {
                   size="small"
                   variant="contained"
                   color="primary"
+                  target="_blank"
                   href={"https://alex-maldonado-soto.github.io/" + repo.name}
                 >
                   Web
