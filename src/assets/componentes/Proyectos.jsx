@@ -79,17 +79,16 @@ const Proyectos = () => {
           gap: 2,
         }}
       >
-
         {repos.map((repo) => (
           <Card
             component={"li"}
             key={repo.id}
             sx={{
               width: { sm: "80vw", md: "49%" },
-              height: { xs: "60vh"},
-              maxHeight: {sm: "40vh"},
+              height: { xs: "60vh" },
+              maxHeight: { sm: "40vh" },
               display: "grid",
-              
+
               gridTemplateColumns: {
                 xs: "80vw",
                 sm: "40% 60%",
@@ -107,7 +106,7 @@ const Proyectos = () => {
                 width: "100%",
                 gridRow: 1,
                 gridColumnStart: 1,
-                gridColumnEnd: {xs: 1, sm: 3},
+                gridColumnEnd: { xs: 1, sm: 3 },
                 textAlign: "left",
               }}
             ></CardHeader>
@@ -115,7 +114,13 @@ const Proyectos = () => {
               sx={{ width: "100%", height: "100%", gridColumn: 1, gridRow: 2 }}
               component="img"
               alt=""
-              image={"https://github.com/Alex-Maldonado-Soto/"+ repo.name +"/blob/main/"+ repo.name +".JPG?raw=true" }
+              image={
+                "https://github.com/Alex-Maldonado-Soto/" +
+                repo.name +
+                "/blob/main/" +
+                repo.name +
+                ".JPG?raw=true"
+              }
             />
             <CardContent
               sx={{
@@ -143,6 +148,7 @@ const Proyectos = () => {
                   variant="contained"
                   size="small"
                   color="primary"
+                  target="_blank"
                   href={repo.html_url}
                 >
                   Repositorio
@@ -152,7 +158,7 @@ const Proyectos = () => {
                   variant="contained"
                   color="primary"
                   target="_blank"
-                  href={"https://alex-maldonado-soto.github.io/" + repo.name}
+                  href={repo.homepage ? repo.homepage: "https://alex-maldonado-soto.github.io/" + repo.name }
                 >
                   Web
                 </Button>
