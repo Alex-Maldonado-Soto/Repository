@@ -77,14 +77,14 @@ export default function About() {
               <GitHubIcon fontSize="large" color="sure" />
             </IconButton>
             {/* Botón de icono para Email con tooltip */}
-            <IconButton color="text.secondary" aria-label="Ir a email para mandarme un mensaje" href="mailto:alexamaldonadosoto@gmail.com" target="_blank">
+            <IconButton color="text.secondary" aria-label="Ir a email para mandarme un mensaje" href="mailto:alexandermaldonadosoto@gmail.com">
               <EmailIcon fontSize="large" color="sure" />
             </IconButton>
             {/* Botón de icono para Instagram con tooltip */}
             <IconButton
               color="text.secondary"
               aria-label="Visita mi perfil de Instagram"
-              href="https://www.instagram.com/alex_maldonado_soto/"
+              href="https://www.instagram.com/maldexander/"
               target="_blank"
             >
               <InstagramIcon fontSize="large" color="sure" />
