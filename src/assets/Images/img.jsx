@@ -9,6 +9,7 @@ import reactlogo from "../Images/reactlogo.jpg";
 import sasslogo from "../Images/sasslogo.jpg";
 import gitlogo from "../Images/gitlogo.jpg";
 import materialuilogo from "../Images/materialuilogo.jpg";
+import IconLogo from "../Images/Icon-logo.png";
 
 export default {
     "backgroundDesktop": backgroundDesktop,
@@ -21,5 +22,6 @@ export default {
     "reactlogo": reactlogo,
     "sasslogo": sasslogo,
     "gitlogo": gitlogo,
-    "materialuilogo": materialuilogo
+    "materialuilogo": materialuilogo,
+    "IconLogo": IconLogo
 }
