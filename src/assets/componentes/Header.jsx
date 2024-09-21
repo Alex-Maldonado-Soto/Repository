@@ -80,14 +80,20 @@ export default function Header() {
         </Typography>
 
         {/* Icono de GitHub */}
+        <Box component={"a"} href="https://github.com/Alex-Maldonado-Soto" target="_blank">
         <GitHubIcon
-          aria-label="Link de mi GitHub"
+          aria-label="Visitar mi Github"
           sx={{
             color: "text.secondary",
             paddingTop: "10px",
-            fontSize: { xs: "2rem", md: "3rem" },
+            fontSize: { xs: "3rem", md: "4rem" },
+
+            "&:hover": {
+              color: "primary.main",
+            },
           }}
         />
+        </Box>
       </Box>
 
       {/* Imagen principal */}

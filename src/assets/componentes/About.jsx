@@ -1,5 +1,6 @@
-import { Box, IconButton, Tooltip, Typography } from "@mui/material";
+import { Box, IconButton, Tooltip, Typography} from "@mui/material";
 import styled from "@emotion/styled";
+import { Theme } from "../Theme";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -26,8 +27,19 @@ export default function About() {
   });
 
   // Estilos para el elemento Caption utilizando styled-components
-  const Caption = styled("figcaption")({
+  const Figcaption = styled("figcaption")({
     textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingTop: "10%",
+
+    "& svg": {
+      textDecoration: "none",
+      "&:hover": {
+        color: Theme.palette.primary.main,
+      },
+    },
   });
 
   return (
@@ -57,25 +69,27 @@ export default function About() {
           <Img
             style={{ borderRadius: "100%" }}
             src={Image.imgContact}
-            alt=""
+            alt="foto de maldexander" 
           />
-          <Caption>
+          <Figcaption>
             {/* Botón de icono para GitHub con tooltip */}
-            <IconButton color="text.secondary" aria-label="Link de mi GitHub">
+            <IconButton color="text.secondary" aria-label="Visitar mi Github" href="https://github.com/Alex-Maldonado-Soto" target="_blank">
               <GitHubIcon fontSize="large" color="sure" />
             </IconButton>
             {/* Botón de icono para Email con tooltip */}
-            <IconButton color="text.secondary" aria-label="Link de mi Email">
+            <IconButton color="text.secondary" aria-label="Ir a email para mandarme un mensaje" href="mailto:alexamaldonadosoto@gmail.com" target="_blank">
               <EmailIcon fontSize="large" color="sure" />
             </IconButton>
             {/* Botón de icono para Instagram con tooltip */}
             <IconButton
               color="text.secondary"
-              aria-label="Link de mi Instagram"
+              aria-label="Visita mi perfil de Instagram"
+              href="https://www.instagram.com/alex_maldonado_soto/"
+              target="_blank"
             >
               <InstagramIcon fontSize="large" color="sure" />
             </IconButton>
-          </Caption>
+          </Figcaption>
         </Figure>
       </Box>
 
