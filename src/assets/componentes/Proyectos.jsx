@@ -30,7 +30,6 @@ const Proyectos = () => {
           "https://api.github.com/users/Alex-Maldonado-Soto/repos"
         );
         setRepos(response.data);
-        console.log(response.data);
       } catch (error) {
         setError(error); // Manejo de errores
       } finally {
